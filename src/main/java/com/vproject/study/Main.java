@@ -42,7 +42,7 @@ public class Main {
         System.out.println("\n\n");
         // endregion
 
-        // region Bubble Sort
+        // region Selection Sort
         System.out.println("======= Selection Sort Zone =======");
         int[] selectionSortArrays =  {14, 14, 8, 5, 9, 1, 1, 9, 6, 7};
         System.out.println("Before:");
@@ -52,6 +52,31 @@ public class Main {
         System.out.println("After:");
         printArray(selectionSortArrays);
         System.out.println("===================================");
+        System.out.println("\n\n");
+        // endregion
+
+        // region Insertion Sort
+        System.out.println("======= Insertion Sort Zone =======");
+        int[] insertionSortArrays =  {14, 14, 8, 5, 9, 1, 1, 9, 6, 7};
+        System.out.println("Before:");
+        printArray(insertionSortArrays);
+        sortAlgorithm.insertionSort(insertionSortArrays);
+        System.out.println("After:");
+        printArray(insertionSortArrays);
+        System.out.println("===================================");
+        System.out.println("\n\n");
+        // endregion
+
+        // region Bubble Sort
+        System.out.println("======= Bubble Sort Zone =======");
+        int[] bubbleSortArrays =  {14, 14, 8, 5, 9, 1, 1, 9, 6, 7};
+        System.out.println("Before:");
+        printArray(bubbleSortArrays);
+        sortAlgorithm.bubbleSort(bubbleSortArrays);
+        System.out.println("After:");
+        printArray(bubbleSortArrays);
+        System.out.println("===================================");
+        System.out.println("\n\n");
         // endregion
 
         // Measure end time
