@@ -1,5 +1,7 @@
 package com.vproject.study.algorithm.sort;
 
+import com.vproject.study.util.StudyUtil;
+
 public class SortAlgorithm {
     // region Selection Sort
     public void selectionSort(int[] array) {
@@ -43,6 +45,64 @@ public class SortAlgorithm {
                     array[innerIndex + 1] = temp;
                 }
             }
+        }
+    }
+    // endregion
+
+    // region Merge Sort
+    public void mergeSort(int[] array) {
+        if (array.length < 2) {
+            // Stop dividing the array if there's only one element left.
+            return;
+        }
+
+        int[] leftArray = new int[array.length / 2];
+        int[] rightArray = new int[array.length - leftArray.length]; // The number of elements would be the remaining numbers
+
+        // Fill up the left array from the origin array
+        for (int leftIndex = 0; leftIndex < leftArray.length; leftIndex++) {
+            leftArray[leftIndex] = array[leftIndex];
+        }
+
+        // Fill up the right array from the origin array, we need to start from the middle point
+        for (int rightIndex = 0; rightIndex < rightArray.length; rightIndex++) {
+            rightArray[rightIndex] = array[leftArray.length + rightIndex];
+        }
+
+        mergeSort(leftArray); // Keep dividing the left array to half
+        mergeSort(rightArray); // Keep dividing the right array to half
+        internalMerge(leftArray, rightArray, array); // Start merging after dividing the element to 1
+    }
+
+    private void internalMerge(int[] firstArray, int[] secondArray, int[] resultArray) {
+        int firstPointer = 0;
+        int secondPointer = 0;
+        int mergedPointer = 0;
+
+        // Follow finger pointing rule to fill the elements to merged array
+        while (firstPointer < firstArray.length && secondPointer < secondArray.length) {
+            if (firstArray[firstPointer] <= secondArray[secondPointer]) {
+                resultArray[mergedPointer] = firstArray[firstPointer];
+                firstPointer++;
+            } else {
+                resultArray[mergedPointer] = secondArray[secondPointer];
+                secondPointer++;
+            }
+            mergedPointer++;
+        }
+
+        // All the remaining elements in first array would be filled to the merged array
+        while (firstPointer < firstArray.length) {
+            resultArray[mergedPointer] = firstArray[firstPointer];
+            mergedPointer++;
+            firstPointer++;
+        }
+
+        // All the remaining elements in second array would be filled to the merged array
+        while (secondPointer < secondArray.length) {
+            resultArray[mergedPointer] = secondArray[secondPointer];
+            mergedPointer++;
+            secondPointer++;
         }
     }
     // endregion
