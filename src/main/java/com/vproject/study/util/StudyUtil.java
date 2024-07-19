@@ -2,8 +2,8 @@ package com.vproject.study.util;
 
 public class StudyUtil {
     public static void printArray(int[] array) {
-        StringBuilder indices = new StringBuilder("Array Index: ");
-        StringBuilder values = new StringBuilder("Array Value: ");
+        StringBuilder indices = new StringBuilder("Index: ");
+        StringBuilder values = new StringBuilder("Value: ");
 
         for (int index = 0; index < array.length; index++) {
             indices.append(String.format("%-3d", index));

@@ -1,4 +1,4 @@
-package com.vproject.study.algorithm;
+package com.vproject.study.algorithm.search;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +25,7 @@ public class SearchAlgorithm {
     }
 
     public List<Integer> linearSearchAllOccurrences(int[] array, int target) {
-        List<Integer> targetIndexList = new ArrayList();
+        List<Integer> targetIndexList = new ArrayList<>();
         for (int arrayIndex = 0; arrayIndex < array.length; arrayIndex++) {
             if (array[arrayIndex] == target) {
                 targetIndexList.add(arrayIndex);
