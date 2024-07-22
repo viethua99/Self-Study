@@ -1,13 +1,13 @@
 package com.vproject.study.leetcode.easy;
 
-public class Solution {
+public class EasySolutions {
     /**
      * ID: 88
      * Title: Merge Sorted Array
      * Difficulty: Easy
      * Link: <a href="https://leetcode.com/problems/merge-sorted-array/description/">...</a>
      */
-    private void mergeSortedArray(int[] nums1, int m, int[] nums2, int n) {
+    public static void mergeSortedArray(int[] nums1, int m, int[] nums2, int n) {
         int[] firstArray = new int[m];
 
         for (int firstIndex = 0; firstIndex < firstArray.length; firstIndex++) {
