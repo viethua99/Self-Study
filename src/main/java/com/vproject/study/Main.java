@@ -5,9 +5,11 @@ import com.vproject.study.algorithm.sort.SortType;
 import com.vproject.study.algorithm.two_pointers.TwoPointersExecutor;
 import com.vproject.study.structure.array.SortedArray;
 import com.vproject.study.structure.array.UnsortedArray;
+import com.vproject.study.structure.linked_list.LinkedListExecutor;
+import com.vproject.study.structure.linked_list.LinkedListType;
 
 public class Main {
     public static void main(String[] args) {
-        TwoPointersExecutor.execute();
+        LinkedListExecutor.execute(LinkedListType.DOUBLY_LINKED_LIST);
     }
 }
