@@ -7,9 +7,11 @@ import com.vproject.study.structure.array.SortedArray;
 import com.vproject.study.structure.array.UnsortedArray;
 import com.vproject.study.structure.linked_list.LinkedListExecutor;
 import com.vproject.study.structure.linked_list.LinkedListType;
+import com.vproject.study.structure.tree.TreeExecutor;
+import com.vproject.study.structure.tree.TreeType;
 
 public class Main {
     public static void main(String[] args) {
-        LinkedListExecutor.execute(LinkedListType.DOUBLY_LINKED_LIST);
+        TreeExecutor.execute(TreeType.BINARY_SEARCH_TREE);
     }
 }
