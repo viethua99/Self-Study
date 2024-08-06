@@ -1,4 +1,4 @@
-package com.vproject.study.algorithms.sort;
+package com.vproject.study.algorithms.sorts;
 
 public enum SortType {
     SELECTION_SORT,

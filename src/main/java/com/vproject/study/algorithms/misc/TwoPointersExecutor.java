@@ -1,4 +1,4 @@
-package com.vproject.study.algorithms.two_pointers;
+package com.vproject.study.algorithms.misc;
 
 import java.util.*;
 
