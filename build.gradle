@@ -3,7 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.jvm'
 }
 
-group 'com.vproject.datastructure'
+group 'com.vproject.dsa'
 version '1.0-SNAPSHOT'
 
 repositories {
